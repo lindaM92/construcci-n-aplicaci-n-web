@@ -1,11 +1,11 @@
 const empleadoController = {};
 
 empleadoController.getAllEmpleados = (req, res) => {
-   res.json({ message: 'List of employees' });
+   res.json({ message: 'Lista de empleadas' });
 };
 
 empleadoController.createEmpleado = (req, res) => {
-   res.json({ message: 'Employee created' });
+   res.json({ message: 'Empleado creado' });
 };
 
 module.exports = empleadoController;
