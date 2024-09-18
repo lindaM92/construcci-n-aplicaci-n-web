@@ -9,8 +9,9 @@ const empleadoController = require("../controllers/empleado.controller");
  */
 const express = require("express");
 
-router.get("/", empleadoController.getAllEmpleados);
-router.post("/", empleadoController.createEmpleado);
+router.get("/", empleadoController.getEmpleados);
+router.post("/", empleadoController.createEmpleados);
+
 // Otras rutas...
 
 /* generamos un ejemplo cuando le soliciten

@@ -1,17 +1,15 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-const {Schema} = mongoose;
+const { Schema } = mongoose;
 
 const EmpleadoSchema = new Schema({
+  nombre: { type: String, required: true },
 
-name: {type:String, require:true},
+  cargo: { type: String, required: true },
 
-position: {type:String, require:true},
+  oficina: { type: String, required: true },
 
-office: {type:String, require:true},
-
-salary: {type:Number, require:true},
-
+  salario: { type: Number, required: true },
 });
 
-module.exports = mongoose.model('Empleado', EmpleadoSchema);
+module.exports = mongoose.model("Empleado", EmpleadoSchema);
