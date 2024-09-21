@@ -1,6 +1,7 @@
 const { Router } = require("express");
 const router = Router();
 const empleadoController = require("../controllers/empleado.controller");
+
 /**
  * Vamos a crear rutas del servidor
  * creamos un módulo por eso utilizamos express
@@ -11,6 +12,11 @@ const express = require("express");
 
 router.get("/", empleadoController.getEmpleados);
 router.post("/", empleadoController.createEmpleados);
+router.get('/:id', empleadoController.getUnicoEmpleado);// obtiene un único empleado
+
+router.put('/:id',empleadoController.editarEmpleado); //Actualizar datos (uno a la vez)
+
+router.delete('/:id', empleadoController.eliminarEmpleado);
 
 // Otras rutas...
 
